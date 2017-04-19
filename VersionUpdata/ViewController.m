@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "XHVersion.h"
 
 @interface ViewController ()
 
@@ -21,20 +22,57 @@
     self.view.backgroundColor = [UIColor yellowColor];
 
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
-    button.center = self.view.center;
-    [button setTitle:@"点击" forState:UIControlStateNormal];
-    [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [button setBackgroundColor:[UIColor whiteColor]];
-    [button addTarget:self action:@selector(buttonClicked) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:button];
+    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 250)/2, 200, 100, 30)];
+    [btn1 setTitle:@"第一种方式" forState:UIControlStateNormal];
+    [btn1 setBackgroundColor:[UIColor blackColor]];
+    [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn1 addTarget:self action:@selector(btn1Buttonclick) forControlEvents:UIControlEventTouchUpInside];
+    
+    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(btn1.frame) + 50, 200, 100, 30)];
+    [btn2 setTitle:@"第二种方式" forState:UIControlStateNormal];
+    [btn2 setBackgroundColor:[UIColor blackColor]];
+    [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btn2 addTarget:self action:@selector(btn2Buttonclick) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:btn1];
+    [self.view addSubview:btn2];
+    
+    
+ 
 }
 
 
--(void)buttonClicked{
+-(void)btn1Buttonclick{
     
     [self checkVersion];
     
+}
+
+
+//参考https://github.com/CoderZhuXH/XHVersion
+
+-(void)btn2Buttonclick{
+    
+    //请在你需要检测更新的位置添加下面代码
+    //1.新版本检测(使用默认提示框)
+    [XHVersion checkNewVersion];
+    
+    //2.如果你需要自定义提示框,请使用下面方法
+    [XHVersion checkNewVersionAndCustomAlert:^(XHAppInfo *appInfo) {
+        
+        //appInfo为新版本在AppStore相关信息
+        //请在此处自定义您的提示框
+        NSLog(@"新版本信息:\n 版本号 = %@ \n 更新时间 = %@\n 更新日志 = %@ \n 在AppStore中链接 = %@\n AppId = %@ \n bundleId = %@" ,
+              appInfo.version,
+              appInfo.currentVersionReleaseDate,
+              appInfo.releaseNotes,
+              appInfo.trackViewUrl,
+              appInfo.trackId,
+              appInfo.bundleId
+              );
+        
+    }];
+
 }
 
 
