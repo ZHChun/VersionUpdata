@@ -19,6 +19,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.title = @"版本检测更新";
+    
     self.view.backgroundColor = [UIColor yellowColor];
 
     
@@ -84,6 +85,7 @@
     
     NSString *jsonResponseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
     
+    
     NSLog(@"通过appStore获取的数据信息：%@",jsonResponseString);
     
     NSData *data = [jsonResponseString dataUsingEncoding:NSUTF8StringEncoding];
@@ -92,6 +94,7 @@
     for (NSDictionary *dic in array) {
         newVersion = [dic valueForKey:@"version"];
     }
+    
     NSLog(@"通过appStore获取的版本号是：%@",newVersion);
     //获取本地软件的版本号
     NSString *localVersion = [[[NSBundle mainBundle]infoDictionary] objectForKey:@"CFBundleVersion"];
@@ -113,7 +116,10 @@
         }]];
         
         [alert addAction:[UIAlertAction actionWithTitle:@"下次再说" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            
             NSLog(@"点击下次再说按钮");
+            
+            
         }]];
     }
 }
