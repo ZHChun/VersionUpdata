@@ -18,41 +18,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    self.title = @"版本检测更新";
-    
-    self.view.backgroundColor = [UIColor yellowColor];
+//    self.title = @"版本检测更新";
 
-    
-    UIButton *btn1 = [[UIButton alloc] initWithFrame:CGRectMake((self.view.bounds.size.width - 250)/2, 200, 100, 30)];
-    [btn1 setTitle:@"第一种方式" forState:UIControlStateNormal];
-    [btn1 setBackgroundColor:[UIColor blackColor]];
-    [btn1 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn1 addTarget:self action:@selector(btn1Buttonclick) forControlEvents:UIControlEventTouchUpInside];
-    
-    UIButton *btn2 = [[UIButton alloc] initWithFrame:CGRectMake(CGRectGetMaxX(btn1.frame) + 50, 200, 100, 30)];
-    [btn2 setTitle:@"第二种方式" forState:UIControlStateNormal];
-    [btn2 setBackgroundColor:[UIColor blackColor]];
-    [btn2 setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btn2 addTarget:self action:@selector(btn2Buttonclick) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:btn1];
-    [self.view addSubview:btn2];
+
     
     
  
 }
 
 
--(void)btn1Buttonclick{
+- (IBAction)selfcheckVersion:(id)sender {
     
     [self checkVersion];
-    
 }
 
-
-//参考https://github.com/CoderZhuXH/XHVersion
-
--(void)btn2Buttonclick{
+- (IBAction)btn2Buttonclick:(id)sender {
+    //参考https://github.com/CoderZhuXH/XHVersion
     
     //请在你需要检测更新的位置添加下面代码
     //1.新版本检测(使用默认提示框)
@@ -73,7 +54,7 @@
               );
         
     }];
-
+    
 }
 
 
@@ -82,10 +63,7 @@
     NSString *newVersion;
     NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/cn/lookup?id=1219112934"];
     //这个URL地址是该app在iTunes connect里面的相关配置信息。其中id是该app在app store唯一的ID编号。
-    
     NSString *jsonResponseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-    
-    
     NSLog(@"通过appStore获取的数据信息：%@",jsonResponseString);
     
     NSData *data = [jsonResponseString dataUsingEncoding:NSUTF8StringEncoding];
