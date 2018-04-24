@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "XHVersion.h"
-
+#import "ZWAppStore.h"
 @interface ViewController ()
 
 @end
@@ -32,6 +32,7 @@
     [self checkVersion];
 }
 
+//这个似乎不能用了
 - (IBAction)btn2Buttonclick:(id)sender {
     //参考https://github.com/CoderZhuXH/XHVersion
     
@@ -57,11 +58,33 @@
     
 }
 
+//https://github.com/wangziwu/ZWAppStore
+- (IBAction)actionCheckVersion:(id)sender {
+    [ZWCheckVersion zw_checkVersionItunesId:@"1278730860"];
+    //    [ZWCheckVersion zw_autoCheckVersionHandleView:^(ZWAppStoreModel *appModel) {
+    //        //需要更新版本、自定义更新视图
+    //    }];
+    //推荐方法、自动检测APP
+    //    [ZWCheckVersion zw_autoCheckVersion];
+}
+- (IBAction)actionShowReview:(id)sender {
+    [ZWActionReview instanceReview].probabilityDaliy = 1.f;
+    [ZWActionReview instanceReview].maxNumDaliy = 3;
+    [ZWActionReview instanceReview].maxTotalNum = 100;
+    [[ZWActionReview instanceReview] zw_actionRequestReview:@"1278730860"];
+    //推荐方法、自动检测APP
+    //    [[ZWActionReview instanceReview] zw_actionRequestReview];
+}
+- (IBAction)actionSkipWriteReview:(id)sender {
+    [[ZWActionReview instanceReview] zw_skipToAppStoreReview:@"1278730860"];
+    //推荐方法、自动检测APP
+    //    [[ZWActionReview instanceReview] zw_skipToAppStoreReview];
+}
 
 -(void)checkVersion{
     
     NSString *newVersion;
-    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/cn/lookup?id=1219112934"];
+    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/cn/lookup?id=1278730860"];
     //这个URL地址是该app在iTunes connect里面的相关配置信息。其中id是该app在app store唯一的ID编号。
     NSString *jsonResponseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
     NSLog(@"通过appStore获取的数据信息：%@",jsonResponseString);
@@ -87,7 +110,7 @@
         
         [alert addAction:[UIAlertAction actionWithTitle:@"现在升级" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/%E6%96%97%E5%9B%BE%E8%A1%A8%E6%83%85%E5%8C%85%E5%A4%A7%E5%85%A8-%E5%8A%A8%E6%80%81gif%E7%BE%8E%E5%9B%BE%E5%B7%A5%E5%8E%82/id1219112934?l=zh&ls=1&mt=8"]];
+            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/cn/app/id1278730860?mt=8"]];
             
 //            这里写的URL地址是该app在app store里面的下载链接地址，其中ID是该app在app store对应的唯一的ID编号。
             NSLog(@"点击现在升级按钮");

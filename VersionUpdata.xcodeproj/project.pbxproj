@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		64152008208F713800D7391F /* Asset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64151FF9208F713800D7391F /* Asset.xcassets */; };
+		64152009208F713800D7391F /* ZWRequestReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 64151FFB208F713800D7391F /* ZWRequestReview.m */; };
+		6415200A208F713800D7391F /* ZWRequestReview.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64151FFC208F713800D7391F /* ZWRequestReview.xib */; };
+		6415200B208F713800D7391F /* ZWActionReview.m in Sources */ = {isa = PBXBuildFile; fileRef = 64151FFD208F713800D7391F /* ZWActionReview.m */; };
+		6415200C208F713800D7391F /* ZWCheckVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 64152001208F713800D7391F /* ZWCheckVersion.m */; };
+		6415200D208F713800D7391F /* ZWUpdateAppView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64152004208F713800D7391F /* ZWUpdateAppView.xib */; };
+		6415200E208F713800D7391F /* ZWAppStoreModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 64152005208F713800D7391F /* ZWAppStoreModel.m */; };
+		6415200F208F713800D7391F /* ZWUpdateAppView.m in Sources */ = {isa = PBXBuildFile; fileRef = 64152006208F713800D7391F /* ZWUpdateAppView.m */; };
 		649F34FD1EA5E6A50072A045 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 649F34FC1EA5E6A50072A045 /* main.m */; };
 		649F35001EA5E6A50072A045 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 649F34FF1EA5E6A50072A045 /* AppDelegate.m */; };
 		649F35031EA5E6A50072A045 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649F35021EA5E6A50072A045 /* ViewController.m */; };
@@ -36,6 +44,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		64151FF7208F713800D7391F /* ZWAppStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAppStore.h; sourceTree = "<group>"; };
+		64151FF9208F713800D7391F /* Asset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Asset.xcassets; sourceTree = "<group>"; };
+		64151FFB208F713800D7391F /* ZWRequestReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWRequestReview.m; sourceTree = "<group>"; };
+		64151FFC208F713800D7391F /* ZWRequestReview.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZWRequestReview.xib; sourceTree = "<group>"; };
+		64151FFD208F713800D7391F /* ZWActionReview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWActionReview.m; sourceTree = "<group>"; };
+		64151FFE208F713800D7391F /* ZWRequestReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWRequestReview.h; sourceTree = "<group>"; };
+		64151FFF208F713800D7391F /* ZWActionReview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWActionReview.h; sourceTree = "<group>"; };
+		64152001208F713800D7391F /* ZWCheckVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWCheckVersion.m; sourceTree = "<group>"; };
+		64152002208F713800D7391F /* ZWUpdateAppView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWUpdateAppView.h; sourceTree = "<group>"; };
+		64152003208F713800D7391F /* ZWAppStoreModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWAppStoreModel.h; sourceTree = "<group>"; };
+		64152004208F713800D7391F /* ZWUpdateAppView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZWUpdateAppView.xib; sourceTree = "<group>"; };
+		64152005208F713800D7391F /* ZWAppStoreModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWAppStoreModel.m; sourceTree = "<group>"; };
+		64152006208F713800D7391F /* ZWUpdateAppView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZWUpdateAppView.m; sourceTree = "<group>"; };
+		64152007208F713800D7391F /* ZWCheckVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZWCheckVersion.h; sourceTree = "<group>"; };
 		649F34F81EA5E6A50072A045 /* VersionUpdata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VersionUpdata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649F34FC1EA5E6A50072A045 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		649F34FE1EA5E6A50072A045 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +114,51 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		64151FF6208F713800D7391F /* ZWAppStore */ = {
+			isa = PBXGroup;
+			children = (
+				64151FF7208F713800D7391F /* ZWAppStore.h */,
+				64151FF8208F713800D7391F /* Resources */,
+				64151FFA208F713800D7391F /* ZWActionReview */,
+				64152000208F713800D7391F /* ZWCheckVersion */,
+			);
+			path = ZWAppStore;
+			sourceTree = "<group>";
+		};
+		64151FF8208F713800D7391F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				64151FF9208F713800D7391F /* Asset.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		64151FFA208F713800D7391F /* ZWActionReview */ = {
+			isa = PBXGroup;
+			children = (
+				64151FFB208F713800D7391F /* ZWRequestReview.m */,
+				64151FFC208F713800D7391F /* ZWRequestReview.xib */,
+				64151FFD208F713800D7391F /* ZWActionReview.m */,
+				64151FFE208F713800D7391F /* ZWRequestReview.h */,
+				64151FFF208F713800D7391F /* ZWActionReview.h */,
+			);
+			path = ZWActionReview;
+			sourceTree = "<group>";
+		};
+		64152000208F713800D7391F /* ZWCheckVersion */ = {
+			isa = PBXGroup;
+			children = (
+				64152001208F713800D7391F /* ZWCheckVersion.m */,
+				64152002208F713800D7391F /* ZWUpdateAppView.h */,
+				64152003208F713800D7391F /* ZWAppStoreModel.h */,
+				64152004208F713800D7391F /* ZWUpdateAppView.xib */,
+				64152005208F713800D7391F /* ZWAppStoreModel.m */,
+				64152006208F713800D7391F /* ZWUpdateAppView.m */,
+				64152007208F713800D7391F /* ZWCheckVersion.h */,
+			);
+			path = ZWCheckVersion;
+			sourceTree = "<group>";
+		};
 		649F34EF1EA5E6A50072A045 = {
 			isa = PBXGroup;
 			children = (
@@ -117,6 +184,7 @@
 		649F34FA1EA5E6A50072A045 /* VersionUpdata */ = {
 			isa = PBXGroup;
 			children = (
+				64151FF6208F713800D7391F /* ZWAppStore */,
 				649F34FE1EA5E6A50072A045 /* AppDelegate.h */,
 				649F34FF1EA5E6A50072A045 /* AppDelegate.m */,
 				649F35011EA5E6A50072A045 /* ViewController.h */,
@@ -278,6 +346,9 @@
 			files = (
 				649F350B1EA5E6A50072A045 /* LaunchScreen.storyboard in Resources */,
 				649F35081EA5E6A50072A045 /* Assets.xcassets in Resources */,
+				64152008208F713800D7391F /* Asset.xcassets in Resources */,
+				6415200A208F713800D7391F /* ZWRequestReview.xib in Resources */,
+				6415200D208F713800D7391F /* ZWUpdateAppView.xib in Resources */,
 				649F35061EA5E6A50072A045 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +425,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6415200B208F713800D7391F /* ZWActionReview.m in Sources */,
+				64152009208F713800D7391F /* ZWRequestReview.m in Sources */,
+				6415200E208F713800D7391F /* ZWAppStoreModel.m in Sources */,
+				6415200C208F713800D7391F /* ZWCheckVersion.m in Sources */,
+				6415200F208F713800D7391F /* ZWUpdateAppView.m in Sources */,
 				649F35031EA5E6A50072A045 /* ViewController.m in Sources */,
 				649F35001EA5E6A50072A045 /* AppDelegate.m in Sources */,
 				649F34FD1EA5E6A50072A045 /* main.m in Sources */,
@@ -510,7 +586,7 @@
 				INFOPLIST_FILE = VersionUpdata/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shenn13.VersionUpdata;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softAnna.xiaoshuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -524,7 +600,7 @@
 				INFOPLIST_FILE = VersionUpdata/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shenn13.VersionUpdata;
+				PRODUCT_BUNDLE_IDENTIFIER = com.softAnna.xiaoshuo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -598,6 +674,7 @@
 				649F35271EA5E6A50072A045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		649F35281EA5E6A50072A045 /* Build configuration list for PBXNativeTarget "VersionUpdataTests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +683,7 @@
 				649F352A1EA5E6A50072A045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		649F352B1EA5E6A60072A045 /* Build configuration list for PBXNativeTarget "VersionUpdataUITests" */ = {
 			isa = XCConfigurationList;
@@ -614,6 +692,7 @@
 				649F352D1EA5E6A60072A045 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

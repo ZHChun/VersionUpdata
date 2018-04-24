@@ -49,6 +49,9 @@
                                     <constraint firstAttribute="height" constant="30" id="daq-uE-Exa"/>
                                 </constraints>
                                 <state key="normal" title="App Store自动检测更新"/>
+                                <connections>
+                                    <action selector="actionCheckVersion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fw2-2P-ubc"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIL-do-Prx">
                                 <rect key="frame" x="66" y="270" width="243" height="30"/>
@@ -56,6 +59,9 @@
                                     <constraint firstAttribute="height" constant="30" id="pqg-7p-nHw"/>
                                 </constraints>
                                 <state key="normal" title="App弹出提醒评价视图"/>
+                                <connections>
+                                    <action selector="actionShowReview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S3W-GL-CzW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V29-ei-i1i">
                                 <rect key="frame" x="66" y="320" width="243" height="30"/>
@@ -63,6 +69,9 @@
                                     <constraint firstAttribute="height" constant="30" id="nOi-YO-PTa"/>
                                 </constraints>
                                 <state key="normal" title="APP直接跳转App Store评价界面"/>
+                                <connections>
+                                    <action selector="actionSkipWriteReview:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kPL-v8-gph"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
